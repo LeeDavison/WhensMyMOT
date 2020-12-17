@@ -1,0 +1,71 @@
+﻿@model Registration
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Whens My MOT ?</title>
+    <link href="~/css/reset.css" rel="stylesheet" />
+    <link href="~/css/whensmymot.css" rel="stylesheet" />
+</head>
+<body>
+
+    <div class="headerbar">
+        When's My MOT ?
+    </div>
+
+    <div class="formcontainer">
+        <form asp-controller="Home" asp-action="CheckRegistration" method="post">
+            <div class="formrow">
+                Please enter registration number (no spaces)
+            </div>
+            <div class="formrowsplit">
+                <div>
+                    <input asp-for="RegNumber" />
+                </div>
+                <div>
+                    <button type="submit">Go !</button>
+                </div>
+            </div>
+            <div>
+                <span asp-validation-for="RegNumber" class="errortext"></span>
+            </div>
+        </form>
+    </div>
+
+
+    @if (Model != null)
+    {
+        <div class="resultscontainer">
+            @if (Model.ErrorMessage != null)
+            {
+                <div class="errortext">@Model.ErrorMessage</div>
+            }
+
+            @if (Model.Make != null)
+            {
+                <div class="resultrowsplit">
+                    <div> Make :</div>
+                    <div>@Model.Make</div>
+                </div>
+                <div class="resultrowsplit">
+                    <div>Model :</div>
+                    <div>@Model.Model</div>
+                </div>
+                <div class="resultrowsplit">
+                    <div>Colour :</div>
+                    <div>@Model.Colour</div>
+                </div>
+                <div class="resultrowsplit">
+                    <div>MOT Expiry Date :</div>
+                    <div>@Model.ExpiryDate</div>
+                </div>
+                <div class="resultrowsplit">
+                    <div>Mileage at last MOT :</div>
+                    <div>@Model.Mileage</div>
+                </div>
+            }
+        </div>
+    }
+</body>
+</html>

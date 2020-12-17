@@ -1,0 +1,74 @@
+﻿@font-face {
+    font-family: 'robotoslab';
+    src: url('../fonts/robotoslab.woff') format('woff');
+}
+
+html {
+    background-color: rgb(255,255,255);
+    color: rgb(20,20,20);
+    font-size: 14px;
+    font-family: 'robotoslab'
+}
+
+.headerbar {
+    background-color: rgb(60,60,60);
+    color: rgb(230,230,230);
+    height: 50px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.formcontainer, .resultscontainer {
+    margin: auto;
+    margin-top: 50px;
+    width: 300px;
+}
+
+.resultscontainer {
+    margin-top: 25px;
+}
+
+.formrow {
+    padding-bottom: 15px;
+}
+
+.formrowsplit {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 5px;
+}
+
+.resultrowsplit {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+}
+
+.errortext {
+    font-size: 12px;
+    color: rgb(192,0,0);
+}
+
+input[type = text] {
+    border: none;
+    border: solid 1px rgb(60,60,60);
+    background-color: rgb(245,245,245);
+    height: 25px;
+    width: 220px;
+    font-family: 'robotoslab';
+    font-size: 14px;
+    padding: 0 5px 0 5px;
+}
+
+button {
+    border: none;
+    background-color: rgb(60,60,60);
+    color: rgb(230,230,230);
+    height: 25px;
+    width: 50px;
+    font-family: 'robotoslab';
+    font-size: 14px;
+}
